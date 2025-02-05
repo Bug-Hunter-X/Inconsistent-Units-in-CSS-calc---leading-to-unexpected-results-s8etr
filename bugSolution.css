@@ -1,0 +1,14 @@
+/* Incorrect usage: mixing units inconsistently */
+.element {
+  width: calc(100px + 50%); /* Inconsistent: px and % */
+}
+
+/* Correct usage: consistent units */
+.element {
+  width: calc(100% - 50px); /* Consistent: both percentage */
+  width: calc((100px + 50px)/2);/* Consistent: both pixels*/
+}
+/*Another correct usage: consistent units with multiplication*/
+.element {
+  width: calc(100px * 2); /* Consistent: both pixels */
+}
